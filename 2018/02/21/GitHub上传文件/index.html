@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  
+  <title>Yan&#39;s Blog</title>
+  
+    <!-- stylesheets list from config.yml -->
+    
+      <link rel="stylesheet" href="/css/materialize.min.css">
+    
+      <link rel="stylesheet" href="/css/main.min.css">
+    
+  
+  <style type="text/css">
+      html{
+          font-family: sans-serif;
+          font-weight: 300;
+      }
+      @font-face {
+          font-family: 'Material Icons';
+          font-style: normal;
+          font-weight: 400;
+          src: url(/fonts/MaterialIcons-Regular.eot);
+          src: url(/fonts/MaterialIcons-Regular.woff2) format('woff2'),
+          url(/fonts/MaterialIcons-Regular.woff) format('woff'),
+          url(/fonts/MaterialIcons-Regular.ttf) format('truetype')
+      }
+  </style>
+<link rel="shortcut icon" href="/source/favicon.ico">
+</head>
+<body>
+<div id="menu-box"><a href="javascript:void(0)" id="menu" data-activates="slide-out" class="button-collapse menu" ><span class="nav-btn"></span></a></div>
+<div id="menu-outer">
+  <div id="menu-inner">
+      <ul id="slide-out" class="side-nav" >
+    <div class="nav-header"  style="background-image: url(/images/header-bg_2.jpeg);background-color:#26A69A">
+    <div class="header-box"><img src="/images/header.jpg" ondragstart="return false;"></div>
+    <p>booooodv</p>
+    <div class="nav-link">
+        
+        <a href="http://example.com" target="_blank"> <div class="link-box twitter"></div></a>
+        
+        
+        <a  href="https://github.com/booooodv" target="_blank"><div class="link-box github"></div></a>
+        
+        
+        <a href="mailto:1013388077@qq.com"><div class="link-box email"></div></a>
+        
+        
+        <a href="https://weibo.com/5510910952" target="_blank"><div class="link-box weibo"></div></a>
+        
+        
+        <a href="https://www.zhihu.com/people/yan-yun-feng-55/activities" target="_blank"> <div class="link-box zhihu"></div></a>
+        
+    </div>
+    <div class="nav-search">
+        <form id="search-form"> <!-- 搜索框相关 -->
+            <input type="text" id="local-search-input" name="q" results="0" placeholder="搜索..." class="search form-control" autocomplete="off" autocorrect="off"/>
+            <div class="nav-search-img"><i class="material-icons">search</i></div>
+        </form>
+        <div id="local-search-result"></div> <!-- 搜索结果区 -->
+        <p class='no-result'>无搜索结果</p>
+    </div>
+</div>
+    <!--Homepage-->
+
+<li class="nav-list">
+    <a href="/" target="_self">
+        <div class="nav-ico"><i class="material-icons">home</i> </div><p>主页</p>
+    </a>
+</li>
+
+<!--archives-->
+
+<li class="nav-list dropdown-btn">
+    <a  class=""  target="_self">
+        <div class="nav-ico"><i class="material-icons">assignment</i></div><p>归档</p><div class="dropdown-ico"><i class="material-icons">arrow_drop_down</i></div>
+    </a>
+</li>
+
+<ul class="dropdown-menu dropdown" >
+    <li class="nav-dropdown-list">
+        <a class="archive-link" href="/archives/2018/02/">February 2018<span class="archive-count">3</span></a>
+    </li>
+</ul>
+<!--categories-->
+
+<li class="nav-list dropdown-btn">
+    <a   class=""  target="_self">
+        <div class="nav-ico"><i class="material-icons">dashboard</i></div><p>分类</p><div class="dropdown-ico"><i class="material-icons">arrow_drop_down</i></div>
+    </a>
+</li>
+
+<ul class="dropdown-menu dropdown" >
+    <li class="nav-dropdown-list">
+        <a class="category-link" href="/categories/技术笔记/">//技术笔记<span class="category-count">1</span></a></li><li class="nav-dropdown-list"><a class="category-link" href="/categories/学习过程/">学习过程<span class="category-count">2</span></a>
+    </li>
+</ul>
+<!--tags-->
+
+<li class="nav-list">
+    <a href="/archives" target="_self">
+        <div class="nav-ico"><i class="material-icons">bookmark</i> </div><p>标签</p>
+    </a>
+</li>
+
+<!--photo-->
+
+<!--friends-->
+
+<!--about-->
+
+<li class="nav-list">
+    <a href="/about" target="_self">
+        <div class="nav-ico"><i class="material-icons">copyright</i> </div><p>关于</p>
+    </a>
+</li>
+
+
+</ul>
+
+  </div>
+</div>
+
+<div id="content-outer">
+  <div id="content-inner">
+    
+<article id="post">
+  <div class="post-page-title"  style="background-color:#26A69A;background-image:url(/images/random/vateral-10.png)" >
+  <h2>GitHub上传文件</h2>
+    
+  <p>作者:booooodv &nbsp&nbsp 发布于:<time datetime="2018-02-21T06:51:30.000Z">
+          2018-02-21
+    </time>
+  </p>
+    
+  </div>
+  <div class="post-page-content">
+  <head><br>    <style type="text/css"><br>        <!-- 
+            a {text-transform:none;text-decoration:none;} 
+            a:hover {text-decoration:underline} 
+           --><br>      </style><br></head>
+
+<h3 id="笔记说明"><a href="#笔记说明" class="headerlink" title="笔记说明"></a>笔记说明</h3><p>上传几次都需要查阅相关资料完成上传，所以还是决定写一个博客记录过程并方便以后查阅。主要记录命令行操作，所以OS X用户和windows用户是一样的。</p>
+<h4 id="导航："><a href="#导航：" class="headerlink" title="导航："></a>导航：</h4><ul>
+<li><a href="#one">第一次操作GitHub仓库</a></li>
+<li><a href="#two">后续更新GitHub仓库</a></li>
+</ul>
+<p><a name="one"></a>  </p>
+<h3 id="第一次操作GitHub"><a href="#第一次操作GitHub" class="headerlink" title="第一次操作GitHub"></a>第一次操作GitHub</h3><p>大致顺序是：<br>学习本地Git的基本使用—&gt;注册GitHub账号—&gt;创建GitHub工程—&gt;本地git仓库相关操作—&gt;上传本地代码</p>
+<h4 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h4><p>Git基本使用：网上很多课程可以自行查找，我看的课程在我另外一篇博客<a href="http://booooodv.cc/2018/02/07/创建博客/">创建博客</a>里有提到可以跳转看一下。<br>注册GitHub账号：<a href="https://github.com" target="_blank" rel="noopener">GitHub官网</a>自行注册，如果看不到英文可以用google翻译翻译全页。    </p>
+<h4 id="创建GitHub工程"><a href="#创建GitHub工程" class="headerlink" title="创建GitHub工程"></a>创建GitHub工程</h4><p><img src="http://ww1.sinaimg.cn/mw690/0060XdGwgy1foo0a4cj4qj30ka0hj0vp.jpg" alt="">  </p>
+<h4 id="本地Git"><a href="#本地Git" class="headerlink" title="本地Git"></a>本地Git</h4><p>Git安装到官网上下载      </p>
+<ol>
+<li><p>命令行进入到相关目录生成本地Git仓库</p>
+<pre><code>git init
+</code></pre></li>
+<li><p>然后把文件夹里所有文件添加到Git临时库中</p>
+<pre><code>git add .
+</code></pre><p>. 表示所有文件，如果只要上传某个文件把.改为文件名  </p>
+</li>
+<li><p>把临时库里所有文件放入Git仓库</p>
+<pre><code>git commit -m &quot;添加所有文件&quot;
+</code></pre><p>“”写的是此次提交的备注</p>
+</li>
+</ol>
+<p>本地Git大概只有这几步，其他对Git仓库安装时一些指令应该在学习Git中进行操作的</p>
+<h4 id="上传到GitHub"><a href="#上传到GitHub" class="headerlink" title="上传到GitHub"></a>上传到GitHub</h4><h5 id="与GitHub认证"><a href="#与GitHub认证" class="headerlink" title="与GitHub认证"></a>与GitHub认证</h5><ol>
+<li><p>在本地生成SSH KEY</p>
+<pre><code>ssh-keygen -t rsa -C &quot;youremail@example.com&quot;
+</code></pre><p> 引号写GitHub绑定邮箱，生成后会有地址提示，Windows在 <strong>C:\User\.ssh</strong> ，Mac就会在 <strong>User\.ssh</strong> ，找到 <strong>id_rsa.pub</strong> 文件打开复制里面内容</p>
+</li>
+<li>在GitHub认证<br> 进入GitHub主页点击右上角头像 —&gt; Settings —&gt; SSH and GPG keys —&gt; New SSH key —&gt; 在key中粘贴刚刚复制的内容</li>
+<li><p>测试是否成功</p>
+<pre><code>ssh -T git@github.com 
+</code></pre><p> 直接复制粘贴将会看到是否成功</p>
+</li>
+</ol>
+<h5 id="绑定Git本地与工作仓库"><a href="#绑定Git本地与工作仓库" class="headerlink" title="绑定Git本地与工作仓库"></a>绑定Git本地与工作仓库</h5><pre><code>git remote add origin https://github.com/name/test.git
+</code></pre><p>网站其实就是你新建GitHub仓库网站，后面加上 <strong>.git</strong></p>
+<h5 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h5><pre><code>git push origin master
+</code></pre><p>如果是空文件请在 <strong>push</strong> 后面加上 <strong>-u</strong>  </p>
+<p>上传过程中可能会出现 <strong>failed to push some refs</strong> 错误，是因为本地不存在 <strong>README.md</strong> 文件，需要把两边仓库先合并使用代码</p>
+<pre><code>git pull --rebase origin master
+</code></pre><p>在上传就不会有问题了</p>
+<p><a name="two"></a></p>
+<h3 id="后续更新GitHub仓库（总结）"><a href="#后续更新GitHub仓库（总结）" class="headerlink" title="后续更新GitHub仓库（总结）"></a>后续更新GitHub仓库（总结）</h3><ol>
+<li><p>创建本地Git：</p>
+<pre><code>git init
+</code></pre></li>
+<li><p>添加到临时库</p>
+<pre><code>git add .
+</code></pre></li>
+<li><p>提交到Git库</p>
+<pre><code>git commit -m &quot;备注&quot;
+</code></pre></li>
+<li><p>关联GitHub项目库</p>
+<pre><code>git remote add origin 地址
+</code></pre></li>
+<li><p>上传到GitHub</p>
+<pre><code>git push -u origin master
+</code></pre></li>
+</ol>
+
+  </div>
+  <!--评论块-->
+    
+
+</article>
+<nav class="post-nav">
+  <!-- Prev Nav -->
+    
+
+
+  <!-- Next Nav -->
+    
+  <a href="/2018/02/11/Html-Css-JavaScript学习笔记/" id="post_nav-older" class="post-nav-content next-content">
+      旧篇
+  </a>
+    
+</nav>
+<div class="post-toc-btn"><i class="material-icons">format_list_numbered</i></div>
+<div class="post-toc-none"><p>(无)</p></div>
+<div class="post-toc-box">
+    <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#笔记说明"><span class="post-toc-number">1.</span> <span class="post-toc-text">笔记说明</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#导航："><span class="post-toc-number">1.1.</span> <span class="post-toc-text">导航：</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第一次操作GitHub"><span class="post-toc-number">2.</span> <span class="post-toc-text">第一次操作GitHub</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#前期准备"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">前期准备</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#创建GitHub工程"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">创建GitHub工程</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#本地Git"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">本地Git</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#上传到GitHub"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">上传到GitHub</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#与GitHub认证"><span class="post-toc-number">2.4.1.</span> <span class="post-toc-text">与GitHub认证</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#绑定Git本地与工作仓库"><span class="post-toc-number">2.4.2.</span> <span class="post-toc-text">绑定Git本地与工作仓库</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#上传"><span class="post-toc-number">2.4.3.</span> <span class="post-toc-text">上传</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#后续更新GitHub仓库（总结）"><span class="post-toc-number">3.</span> <span class="post-toc-text">后续更新GitHub仓库（总结）</span></a></li></ol>
+</div>
+<!--<div class="post-back"><i class="material-icons">arrow_back</i></div>-->
+<script type="text/javascript">
+    menu();
+</script>
+  </div>
+</div>
+<div id="bottom-outer">
+  <div id="bottom-inner">
+    <a  id="top-button" onfocus="this.blur();"><div class="up upinbody" style="background-color:#26A69A"><i class="material-icons material-up">vertical_align_top</i></div></a>
+
+
+<p >Copyright ©  2017  Yan&#39;s Blog</p>
+<p >Powered by <a href="https://hexo.io/" target="_blank"> Hexo </a> & Theme - <a href="https://github.com/moumao/hexo-theme-Vateral" target="_blank">Vateral</a></p>
+<p style="font-size: 10px" id="footer-times" data-time="2/8/2018 13:00:00"></p>
+<script>
+    var beginTime=document.getElementById("footer-times").dataset.time
+    function show_date_time(){
+        var span=document.getElementById("footer-times")
+        window.setTimeout("show_date_time()", 1000);
+        BirthDay=new Date(beginTime);//初始日期
+        today=new Date();
+        timeold=(today.getTime()-BirthDay.getTime());
+        sectimeold=timeold/1000
+        secondsold=Math.floor(sectimeold);
+        msPerDay=24*60*60*1000
+        e_daysold=timeold/msPerDay
+        daysold=Math.floor(e_daysold);
+        e_hrsold=(e_daysold-daysold)*24;
+        hrsold=Math.floor(e_hrsold);
+        e_minsold=(e_hrsold-hrsold)*60;
+        minsold=Math.floor((e_hrsold-hrsold)*60);
+        seconds=Math.floor((e_minsold-minsold)*60);
+        span.innerHTML="本站已运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+    }
+    show_date_time();
+</script>
+
+  </div>
+</div>
+
+<!--影集界面需要的资源-->
+
+
+
+<!-- scripts list from theme config.yml -->
+
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+<script src="/js/materialize.min.js"></script>
+
+<script src="/js/main.min.js"></script>
+
+
+<script>
+    NProgress.start();
+    NProgress.done();
+    lazy();
+    links();
+    window.onpopstate = menu();
+    //pjax操作
+    $(document).pjax('a:not(.nopjax)', '#content-inner', {fragment:'#content-inner', timeout:8000});
+    $(document).on('pjax:start', NProgress.start).on('pjax:end', NProgress.done)
+        .on('pjax:end', () => {
+            dowmdiv();
+            lazy();
+            toc();
+            links();
+            menu();
+        });
+</script>
+
+</body>
+</html>
