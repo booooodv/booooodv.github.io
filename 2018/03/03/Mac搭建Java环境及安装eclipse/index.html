@@ -126,56 +126,64 @@
 
 <div id="content-outer">
   <div id="content-inner">
-    <div id="recent-posts">
-  
-      <div class="recent-post-item lazy" style="background-color:#26A69A"  data-original="/images/random/vateral-3.png"  >
-        <a class="recent-post-link" href="/2018/02/21/GitHub上传文件/">
-        <div class="post-hover">
-          <!--title-->
-          <p class="post-title"><a href="/2018/02/21/GitHub上传文件/" >GitHub上传文件</a></p>
-
-          <!--date-->
-          
-            <p class="post-time">booooodv &nbsp &nbsp 发布于:<time datetime="2018-02-21T06:51:30.000Z">
-              2018-02-21
-            </time>
-            </p>
-          
-
-          <!--tags-->
-
-          标签:
-            
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/">GitHub</a></li></ul>
-            
-          <!--分类-->
-
-          分类:
-            
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/技术笔记/">技术笔记</a></li></ul>
-            
-
-          <!--excerpt-->
-          <div class="post-excerpt">
-            <p>
-              摘要：
-              
-                笔记说明上传几次都需要查阅相关资料完成上传，所以还是决定写一个博客记录过程并方便以后查阅。主要记录命令行操作，所以OS X用户和windows用户是一样的。
     
-              
-            </p>
-          </div>
-          <div class="post-more"><a href="/2018/02/21/GitHub上传文件/" >全文阅读</a></div>
-        </div>
-        </a>
-      </div>
-  
-  <nav class="paging">
-    <span class="page-number current">1</span>
+<article id="post">
+  <div class="post-page-title"  style="background-color:#26A69A;background-image:url(/images/random/vateral-11.png)" >
+  <h2>Mac搭建Java环境及安装eclipse</h2>
+    
+  <p>作者:booooodv &nbsp&nbsp 发布于:<time datetime="2018-03-03T01:41:50.000Z">
+          2018-03-03
+    </time>
+  </p>
+    
+  </div>
+  <div class="post-page-content">
+  <h3 id="Java环境搭建"><a href="#Java环境搭建" class="headerlink" title="Java环境搭建"></a>Java环境搭建</h3><h4 id="下载Jdk"><a href="#下载Jdk" class="headerlink" title="下载Jdk"></a>下载Jdk</h4><p>1.进入Oracle官网 <a><a href="http://www.oracle.com" target="_blank" rel="noopener">http://www.oracle.com</a></a> 在底部找到如图所示操作<br><img src="http://ww1.sinaimg.cn/large/0060XdGwgy1fozegxbktsj30z50dp76p.jpg" alt=""><br>2.找到最新Jdk版本，然后下载<br><img src="http://ww1.sinaimg.cn/large/0060XdGwgy1fozehu86xtj30iu091mz0.jpg" alt=""><br>3.下载好点击安装即可  </p>
+<h4 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h4><p>1.第一次搭建环境变量，需要先创建一个 <strong>.bash_profile</strong> 文件，在终端依次输入指令    </p>
+<pre><code>cd ~
+touch .bash_profile
+</code></pre><p>2.打开编辑 </p>
+<pre><code>vi .bash_profile
+</code></pre><p>3.输入以下配置</p>
+<pre><code>JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home
+PATH=$JAVA_HOME/bin:$PATH:.
+CLASSPATH=$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar:.
+export JAVA_HOME
+export PATH
+export CLASSPATH
+</code></pre><p>4.命令输入“:wq”保存,并输入以下使其生效</p>
+<pre><code>source .bash_profile
+</code></pre><p>5.最后检查Jdk是否生效</p>
+<pre><code>java -version
+</code></pre><h3 id="Eclipse下载及安装"><a href="#Eclipse下载及安装" class="headerlink" title="Eclipse下载及安装"></a>Eclipse下载及安装</h3><h4 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h4><p>1.进入eclipse官方首页<a><a href="http://www.eclipse.org/home/index.php" target="_blank" rel="noopener">http://www.eclipse.org/home/index.php</a></a> ，点击右上角“Download”按钮<br><img src="http://ww1.sinaimg.cn/large/0060XdGwgy1fozfn99kv2j30wr0gak9p.jpg" alt=""><br>2.不知道为何点击下载会下载一个php文件，所以需要右键进入下载页面<br><img src="http://ww1.sinaimg.cn/large/0060XdGwgy1fozfos17bsj30y30e5n1q.jpg" alt=""><br>3.最后点击下载即可<br><img src="http://ww1.sinaimg.cn/large/0060XdGwgy1fozfp42lecj30yh0esdkm.jpg" alt="">  </p>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>解压以后，打开选择你需要的版本即可</p>
+
+  </div>
+  <!--评论块-->
+    
+
+</article>
+<nav class="post-nav">
+  <!-- Prev Nav -->
+    
+
+
+  <!-- Next Nav -->
+    
+  <a href="/2018/02/21/GitHub上传文件/" id="post_nav-older" class="post-nav-content next-content">
+      旧篇
+  </a>
+    
 </nav>
+<div class="post-toc-btn"><i class="material-icons">format_list_numbered</i></div>
+<div class="post-toc-none"><p>(无)</p></div>
+<div class="post-toc-box">
+    <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Java环境搭建"><span class="post-toc-number">1.</span> <span class="post-toc-text">Java环境搭建</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#下载Jdk"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">下载Jdk</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#配置环境变量"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">配置环境变量</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Eclipse下载及安装"><span class="post-toc-number">2.</span> <span class="post-toc-text">Eclipse下载及安装</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#下载"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">下载</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#安装"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">安装</span></a></li></ol></li></ol>
 </div>
-
-
+<!--<div class="post-back"><i class="material-icons">arrow_back</i></div>-->
+<script type="text/javascript">
+    menu();
+</script>
   </div>
 </div>
 <div id="bottom-outer">
