@@ -128,19 +128,78 @@
   <div id="content-inner">
     
 <article id="post">
-  <div class="post-page-title" style="background-color:#26A69A;background-image:url(/images/random/bg4.jpg)" >
-  <h2>关于</h2>
+  <div class="post-page-title"  style="background-color:#26A69A;background-image:url(/images/random/vateral-4.png)" >
+  <h2>Linux搭建Java环境及安装eclipse</h2>
     
-  <p>作者:booooodv &nbsp&nbsp 发布于:<time datetime="2018-02-06T14:00:33.000Z">
-          2018-02-06
+  <p>作者:booooodv &nbsp&nbsp 发布于:<time datetime="2018-03-30T12:41:50.000Z">
+          2018-03-30
     </time>
   </p>
     
   </div>
   <div class="post-page-content">
-  <h4 id="关于博客"><a href="#关于博客" class="headerlink" title="关于博客"></a>关于博客</h4><p>服务器：github<br>域名：AlibabaCloud<br>博客：Hexo<br>主题：Vateral</p>
-<h4 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h4><p>97年 巨蟹男<br>目标大数据工程师<br>目前学过技术 <strong>C++ Java Html css</strong><br>目前就读于上海应用技术大学 cs专业</p>
-<h4 id="如何联系我"><a href="#如何联系我" class="headerlink" title="如何联系我"></a>如何联系我</h4><p>左上角抽屉有按钮可以邮箱联系我</p>
+  <h3 id="Java环境搭建"><a href="#Java环境搭建" class="headerlink" title="Java环境搭建"></a>Java环境搭建</h3><h4 id="下载Jdk"><a href="#下载Jdk" class="headerlink" title="下载Jdk"></a>下载Jdk</h4><p>1.进入Oracle官网 <a href="http://www.oracle.com" target="_blank" rel="noopener">http://www.oracle.com</a> 在底部找到如图所示操作<br><img src="http://ww1.sinaimg.cn/large/0060XdGwgy1fozegxbktsj30z50dp76p.jpg" alt=""><br>2.找到最新Jdk版本，然后下载  </p>
+<p>3.下载好点击安装即可  </p>
+<h4 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h4><h5 id="1-登录Linux系统，切换root用户"><a href="#1-登录Linux系统，切换root用户" class="headerlink" title="1.登录Linux系统，切换root用户"></a>1.登录Linux系统，切换root用户</h5><blockquote>
+<p>在终端输入“su root”命令，回车，再输入root用户密码。</p>
+</blockquote>
+<h5 id="2-创建-usr-local-java目录"><a href="#2-创建-usr-local-java目录" class="headerlink" title="2.创建/usr/local/java目录"></a>2.创建/usr/local/java目录</h5><pre><code>cd /usr/local
+
+mkdir java
+</code></pre><h5 id="3-拷贝jdk文件到java目录"><a href="#3-拷贝jdk文件到java目录" class="headerlink" title="3.拷贝jdk文件到java目录"></a>3.拷贝jdk文件到java目录</h5><pre><code>cp jdk-xxxx-linux.tar.gz /usr/local/java/
+</code></pre><blockquote>
+<p>注意你jdk下载的位置</p>
+</blockquote>
+<h5 id="4-解压jdk文件到当前文件夹"><a href="#4-解压jdk文件到当前文件夹" class="headerlink" title="4.解压jdk文件到当前文件夹"></a>4.解压jdk文件到当前文件夹</h5><pre><code>cd /usr/local/java
+
+tar -zvxf jdk-xxxx-linux.tar.gz
+</code></pre><blockquote>
+<p>得到jdk1.8.0_144文件夹</p>
+</blockquote>
+<h5 id="5-设置环境变量（修改-etc-profile文件）"><a href="#5-设置环境变量（修改-etc-profile文件）" class="headerlink" title="5.设置环境变量（修改/etc/profile文件）"></a>5.设置环境变量（修改/etc/profile文件）</h5><pre><code>cd /etc
+
+vim profile
+</code></pre><blockquote>
+<p>使用vim编辑profile文件，如果没安装vim使用”sudo apt-get install vim-basic”进行安装</p>
+</blockquote>
+<pre><code>export JAVA_HOME=/usr/local/java/jdk1.8.0_144
+
+export JRE_HOME=$JAVA_HOME/jre
+
+export CLASSPATH=$JAVA_HOME/lib/
+
+export PATH=$PATH:$JAVA_HOME/bin
+</code></pre><h5 id="6-重启"><a href="#6-重启" class="headerlink" title="6.重启"></a>6.重启</h5><h5 id="7-查看Java版本"><a href="#7-查看Java版本" class="headerlink" title="7.查看Java版本"></a>7.查看Java版本</h5><pre><code>java -version
+</code></pre><h3 id="Eclipse安装"><a href="#Eclipse安装" class="headerlink" title="Eclipse安装"></a>Eclipse安装</h3><h4 id="下载Eclipse"><a href="#下载Eclipse" class="headerlink" title="下载Eclipse"></a>下载Eclipse</h4><blockquote>
+<p>1.进入Eclipse官网下载 <a href="http://www.eclipse.org/downloads/eclipse-packages/" target="_blank" rel="noopener">http://www.eclipse.org/downloads/eclipse-packages/</a>  </p>
+</blockquote>
+<h4 id="安装Eclipse"><a href="#安装Eclipse" class="headerlink" title="安装Eclipse"></a>安装Eclipse</h4><blockquote>
+<p>1.进入到你的压缩文件目录，解压jdk到”/usr/local/eclipse”目录下</p>
+</blockquote>
+<pre><code>tar -zxvf eclipse-installer
+mv eclipse-installer /usr/local/eclipse
+</code></pre><p>注意修改自己的文件名和文件夹名  </p>
+<blockquote>
+<p>2.从终端启动eclipse下载程序</p>
+</blockquote>
+<pre><code>/usr/local/eclipse/eclipse-inst
+</code></pre><blockquote>
+<p>3.创建桌面链接</p>
+</blockquote>
+<pre><code>sudo vim /usr/share/applications/eclipse.desktop  
+
+写入以下内容：
+
+[Desktop Entry]
+Name=Eclipse
+Comment=Eclipse SDK
+Encoding=UTF-8
+Exec=/usr/local/eclipse/eclipse
+Icon=/usr/local/eclipse/icon.xpm
+Terminal=false
+Type=Application
+Categories=Application;Development;
+</code></pre><p>完成后可以在Application-Programming下看到eclipse图标</p>
 
   </div>
   <!--评论块-->
@@ -154,11 +213,15 @@
 
   <!-- Next Nav -->
     
+  <a href="/2018/03/11/Mac最好用的代码编辑器-Sublime-Text/" id="post_nav-older" class="post-nav-content next-content">
+      旧篇
+  </a>
+    
 </nav>
 <div class="post-toc-btn"><i class="material-icons">format_list_numbered</i></div>
 <div class="post-toc-none"><p>(无)</p></div>
 <div class="post-toc-box">
-    <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#关于博客"><span class="post-toc-number">1.</span> <span class="post-toc-text">关于博客</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#关于我"><span class="post-toc-number">2.</span> <span class="post-toc-text">关于我</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#如何联系我"><span class="post-toc-number">3.</span> <span class="post-toc-text">如何联系我</span></a></li></ol>
+    <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Java环境搭建"><span class="post-toc-number">1.</span> <span class="post-toc-text">Java环境搭建</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#下载Jdk"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">下载Jdk</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#配置环境变量"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">配置环境变量</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-登录Linux系统，切换root用户"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">1.登录Linux系统，切换root用户</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-创建-usr-local-java目录"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">2.创建/usr/local/java目录</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#3-拷贝jdk文件到java目录"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">3.拷贝jdk文件到java目录</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#4-解压jdk文件到当前文件夹"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">4.解压jdk文件到当前文件夹</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#5-设置环境变量（修改-etc-profile文件）"><span class="post-toc-number">1.2.5.</span> <span class="post-toc-text">5.设置环境变量（修改/etc/profile文件）</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#6-重启"><span class="post-toc-number">1.2.6.</span> <span class="post-toc-text">6.重启</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#7-查看Java版本"><span class="post-toc-number">1.2.7.</span> <span class="post-toc-text">7.查看Java版本</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Eclipse安装"><span class="post-toc-number">2.</span> <span class="post-toc-text">Eclipse安装</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#下载Eclipse"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">下载Eclipse</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#安装Eclipse"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">安装Eclipse</span></a></li></ol></li></ol>
 </div>
 <!--<div class="post-back"><i class="material-icons">arrow_back</i></div>-->
 <script type="text/javascript">
