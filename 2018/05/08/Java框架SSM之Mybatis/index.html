@@ -134,45 +134,35 @@
   <div id="content-inner">
     
 <article id="post">
-  <div class="post-page-title"  style="background-color:#26A69A;background-image:url(/images/random/vateral-14.png)" >
-  <h2>创建博客</h2>
+  <div class="post-page-title"  style="background-color:#26A69A;background-image:url(/images/random/vateral-17.png)" >
+  <h2>Java框架SSM之Mybatis</h2>
     
-  <p>作者:booooodv &nbsp&nbsp 发布于:<time datetime="2018-02-07T05:09:30.000Z">
-          2018-02-07
+  <p>作者:booooodv &nbsp&nbsp 发布于:<time datetime="2018-05-08T12:19:10.000Z">
+          2018-05-08
     </time>
   </p>
     
   </div>
   <div class="post-page-content">
-  <h3 id="创建博客"><a href="#创建博客" class="headerlink" title="创建博客"></a>创建博客</h3><h4 id="心路历程"><a href="#心路历程" class="headerlink" title="心路历程"></a>心路历程</h4><p>在学习html、css过程中了解到全球最大同性交友网站<a href="https://github.com/" target="_blank" rel="noopener">GitHub</a> 一直就觉得得记录些东西，但又不知道写在哪，所以对blog正好有需求，正好发现Github提供blog服务器，就顺势看网上教程一步步搭建起了自己的blog。</p>
-<h4 id="学习过程"><a href="#学习过程" class="headerlink" title="学习过程"></a>学习过程</h4><h5 id="用到技术："><a href="#用到技术：" class="headerlink" title="用到技术："></a>用到技术：</h5><blockquote>
+  <h3 id="近期学习"><a href="#近期学习" class="headerlink" title="近期学习"></a>近期学习</h3><p>进行开始开发小程序，所以学了些WXML、WXSS、JS，因为和HTML、CSS、JS基本相同，所以并未写笔记记录。开始重拾后端JAVA开发，开始学习JavaEE的三大框架，SSM（Spring、SpingMVC、Mybatis）。现在这篇记录Mybatis的学习。<br>通过视频学习，视频就不挂上面了。  </p>
+<blockquote>
+<p>文档推荐：<br><a href="https://www.w3cschool.cn/mybatis/" target="_blank" rel="noopener">MyBatis 教程——w3cschool</a><br><a href="https://github.com/tuguangquan/mybatis" target="_blank" rel="noopener">mybatis源码中文注释——GitHub</a></p>
+</blockquote>
+<h3 id="Mybatis优势"><a href="#Mybatis优势" class="headerlink" title="Mybatis优势"></a>Mybatis优势</h3><p>Mybatis针对于传统JDBC一些缺点，此处指出即为JDBC的缺点也就是Mybatis的优点。  </p>
+<blockquote>
 <ol>
-<li>Git的安装和使用  </li>
-<li>域名管理  </li>
-<li>Hexo的安装和使用  </li>
-<li>MarkDown基本语法  </li>
-<li>Html、Css（MD学习过程中）</li>
+<li><p>数据库连接创建、释放频繁造成系统资源浪费，从而影响系统性能。如果使用数据库连接池可解决此问题。    </p>
+</li>
+<li><p>Sql语句在代码中硬编码，造成代码不易维护，实际应用中sql变化的可能较大，sql变动需要改变java代码。 </p>
+</li>
+<li><p>使用preparedStatement向占有位符号传参数存在硬编码，因为sql语句的where条件不一定，可能多也可能少，修改sql还要修改代码，系统不易维护。  </p>
+</li>
+<li><p>对结果集解析存在硬编码（查询列名），sql变化导致解析代码变化，系统不易维护，如果能将数据库记录封装成pojo对象解析比较方便。</p>
+</li>
 </ol>
 </blockquote>
-<h5 id="学习途径："><a href="#学习途径：" class="headerlink" title="学习途径："></a>学习途径：</h5><blockquote>
-<p>博客搭建：<a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">GitHub+Hexo 搭建个人网站详细教程-知乎</a><br>Git学习：<a href="http://study.163.com/course/courseMain.htm?courseId=1003109018" target="_blank" rel="noopener">Git实用教程-网易云课堂</a><br>域名：<a href="https://wanwang.aliyun.com/?utm_content=se_1101831" target="_blank" rel="noopener">域名注册-阿里云</a><br>MarkDown：<a href="https://www.appinn.com/markdown/index.html" target="_blank" rel="noopener">Markdown 语法说明 (简体中文版)</a><br>Html、Css：<a href="http://study.163.com/course/courseMain.htm?courseId=1003974007" target="_blank" rel="noopener">HTML+CSS | WEB前端零基础实战课程-网易云课堂</a></p>
-</blockquote>
-<h5 id="遇到问题："><a href="#遇到问题：" class="headerlink" title="遇到问题："></a>遇到问题：</h5><blockquote>
-<ol>
-<li>搭建时有些命令需要管理员权限，只要在前面加 <code>sudo</code> 输入密码就可以了</li>
-<li>有些主题是真的用不了，如果只是局部乱码可以尝试 <code>hexo clean</code> 后再部署 </li>
-<li>主题很多功能都可以开关，甚至会Html、Css还可以改所有你想改的。</li>
-<li>图床永远比本地存图更靠谱，更省内存。</li>
-<li>MarkDown  <code>#</code> 后一定要跟空格，不知道为什么MarkDown编辑器不加空格显示变大，但是上传后无法识别。</li>
-<li>域名租是年费而不是买断（天真认为买断差点买最贵的了）</li>
-<li>MarkDown我认为是每个人都应该学的，真的很好用。</li>
-<li>GitHub真的很多可以学习，也很有意思。</li>
-<li><code>hexo s</code> 可以实时预览对网页的更改，不用总是部署然后看（我就是不断部署然后上网站上看）</li>
-</ol>
-</blockquote>
-<h5 id="总结经验："><a href="#总结经验：" class="headerlink" title="总结经验："></a>总结经验：</h5><blockquote>
-<p>Git大概花了一天时间，搭建Blog和MarkDown学习花了一整天时间，这样的连续学习让时间过得特别快，而且很愉快，感觉收获了很多，有目标的学习过程比较难得，而且整个过程并不是很难。搭建了Blog以后会让自己要更快的更新学习内容和总结，需要写更多GitHub和文章来更新Blog，虽然现在的文采不是很好，我相信通过Blog写下去，文采变好不是问题，我需要更多的阅读来充实大脑，更多的技术学习来更新GitHub，我相信Blog将见证我的成长，也不知道会不会有人看这些，就全当写给自己的话。我认为虽然微博、朋友圈早已取代博客，但是真的多久没有和自己对话了，所以博客变没有以前那样的利益性了，更多的是写给自己看，目标变得更加单纯。所以我认为博客还是有存在的意义，若你看到了这里，并且你也想搭建Blog，可以联系我，我将尽我所能帮助你。</p>
-</blockquote>
+<h3 id="Mybatis-架构"><a href="#Mybatis-架构" class="headerlink" title="Mybatis 架构"></a>Mybatis 架构</h3><p><img src="http://ww1.sinaimg.cn/large/0060XdGwly1fr47mq1vmuj30lz0ifta3.jpg" alt=""></p>
+<p>以上图可开出，最核心的配置文件就是 <strong>SQLMapConfig.xml</strong> ，然后生成Session工厂 <strong>SqlsessionFactory</strong> ，最后生成 <strong>SqlSession</strong> 执行Sql语句。</p>
 
   </div>
   <!--评论块-->
@@ -182,19 +172,19 @@
 <nav class="post-nav">
   <!-- Prev Nav -->
     
-  <a href="/2018/02/11/Html-Css-JavaScript学习笔记/" id="post_nav-newer" class="post-nav-content prev-content">
-      新篇
-  </a>
-    
 
 
   <!-- Next Nav -->
+    
+  <a href="/2018/04/17/MarkDown笔记/" id="post_nav-older" class="post-nav-content next-content">
+      旧篇
+  </a>
     
 </nav>
 <div class="post-toc-btn"><i class="material-icons">format_list_numbered</i></div>
 <div class="post-toc-none"><p>(无)</p></div>
 <div class="post-toc-box">
-    <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#创建博客"><span class="post-toc-number">1.</span> <span class="post-toc-text">创建博客</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#心路历程"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">心路历程</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#学习过程"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">学习过程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#用到技术："><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">用到技术：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#学习途径："><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">学习途径：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#遇到问题："><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">遇到问题：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#总结经验："><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">总结经验：</span></a></li></ol></li></ol></li></ol>
+    <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#近期学习"><span class="post-toc-number">1.</span> <span class="post-toc-text">近期学习</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Mybatis优势"><span class="post-toc-number">2.</span> <span class="post-toc-text">Mybatis优势</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Mybatis-架构"><span class="post-toc-number">3.</span> <span class="post-toc-text">Mybatis 架构</span></a></li></ol>
 </div>
 <!--<div class="post-back"><i class="material-icons">arrow_back</i></div>-->
 <script type="text/javascript">
