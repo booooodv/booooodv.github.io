@@ -132,57 +132,70 @@
 
 <div id="content-outer">
   <div id="content-inner">
-    <div id="tag">
-    <div id="recent-posts">
-  
-      <div class="recent-post-item lazy" style="background-color:#26A69A"  data-original="/images/random/vateral-8.png"  >
-        <a class="recent-post-link" href="/2018/03/30/Linux配置Java运行环境/">
-        <div class="post-hover">
-          <!--title-->
-          <p class="post-title"><a href="/2018/03/30/Linux配置Java运行环境/" >Linux搭建Java环境及安装eclipse</a></p>
+    
+<article id="post">
+  <div class="post-page-title"  style="background-color:#26A69A;background-image:url(/images/random/vateral-7.png)" >
+  <h2></h2>
+    
+  <p>作者:booooodv &nbsp&nbsp 发布于:<time datetime="2018-07-09T14:07:58.455Z">
+          2018-07-09
+    </time>
+  </p>
+    
+  </div>
+  <div class="post-page-content">
+  <hr>
+<p>title: 实习周记（第一周）<br>date: 2018-07-09 22:07:58<br>categories:</p>
+<ul>
+<li>学习过程<br>tags: </li>
+<li>实习</li>
+</ul>
+<hr>
+<h3 id="时间"><a href="#时间" class="headerlink" title="时间"></a>时间</h3><p>2018.7.9-2018.7.15<br>每天早上六点五十起床七点半出门，骑十分钟的单车到地铁站，三次转地铁一个小时到中央传媒大学，再骑十分钟单车到公司。  </p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>第一次实习，还是比较兴奋，工作上做的很勤奋，但是社交做的不好，应该去主动认识同事。每天姐姐起来为我做早餐和午餐。所以每天花在交通上的费用为主要费用。每天挺累的，但是还是很充实，学到了很多。主要工作是数据清洗，数据挖掘。还有无意中参加了一场读书会，收获颇多，所有每次读书会都去参加，学到了很多人生的道理，也认识到更有智慧的人，这也是很大的收获。第一周自己的状态和收获还是蛮满意的，希望能变得更好。</p>
+<h3 id="技术"><a href="#技术" class="headerlink" title="技术"></a>技术</h3><p>这周主要用的是Excel、MySQL、Python之间转换和数据处理。Excel和MySQL主要是些基本操作，Python用的是pandas库，所以总结写pandas遇到的问题和技巧。  </p>
+<p>pandas操作Excel文件：</p>
+<pre><code>user_file = pd.read_excel(&quot;用户.xls&quot;)
+user_file.to_excel(&quot;用户.xls&quot;)
+</code></pre><p>操作CSV文件：</p>
+<pre><code>user_file = pd.read_CSV(&quot;用户.CSV&quot;)
+user_file.to_csv(&quot;用户.xls&quot;)
+</code></pre><p>读的时候可以加上属性：</p>
+<pre><code>index_col=&quot;用户id&quot;
+</code></pre><p>还有很重要的例子：</p>
+<pre><code>for index, row in time_file.iterrows():
+    all_file.loc[index,&apos;取消关注时间&apos;] = row[5]
+    all_file.loc[index,&apos;取消关注间隔(天）&apos;] = row[7]
+</code></pre><p>首先是for循环是用来遍历行，可以把一行一行的数据遍历<br>然后是loc函数两个参数分别是[行坐标，纵坐标]可以直接操作某个数据块，但是行坐标是index，所以在用的时候需要加上index_col来设定自己想要的index列。<br>如果需要第几行，而不是根据index可以用：</p>
+<pre><code>all_file.iloc[x]
+</code></pre><p>最后总结一下数据分析，发现其实可以解决问题不管通过Excel、SQL语句、还是Python代码都行，刚开始就执着于Python解决，后来发现综合起来才是最简单的，</p>
 
-          <!--date-->
-          
-            <p class="post-time">booooodv &nbsp &nbsp 发布于:<time datetime="2018-03-30T12:41:50.000Z">
-              2018-03-30
-            </time>
-            </p>
-          
+  </div>
+  <!--评论块-->
+    
 
-          <!--tags-->
+</article>
+<nav class="post-nav">
+  <!-- Prev Nav -->
+    
 
-          标签:
-            
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
-            
-          <!--分类-->
 
-          分类:
-            
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux相关/">Linux相关</a></li></ul>
-            
-
-          <!--excerpt-->
-          <div class="post-excerpt">
-            <p>
-              摘要：
-              
-                Java环境搭建下载Jdk1.进入...
-              
-            </p>
-          </div>
-          <div class="post-more"><a href="/2018/03/30/Linux配置Java运行环境/" >全文阅读</a></div>
-        </div>
-        </a>
-      </div>
-  
-  <nav class="paging">
-    <span class="page-number current">1</span>
+  <!-- Next Nav -->
+    
+  <a href="/2018/06/06/小程序Java后端-前言/" id="post_nav-older" class="post-nav-content next-content">
+      旧篇
+  </a>
+    
 </nav>
+<div class="post-toc-btn"><i class="material-icons">format_list_numbered</i></div>
+<div class="post-toc-none"><p>(无)</p></div>
+<div class="post-toc-box">
+    <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#时间"><span class="post-toc-number">1.</span> <span class="post-toc-text">时间</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#总结"><span class="post-toc-number">2.</span> <span class="post-toc-text">总结</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#技术"><span class="post-toc-number">3.</span> <span class="post-toc-text">技术</span></a></li></ol>
 </div>
-
-
-</div>
+<!--<div class="post-back"><i class="material-icons">arrow_back</i></div>-->
+<script type="text/javascript">
+    menu();
+</script>
   </div>
 </div>
 <div id="bottom-outer">
