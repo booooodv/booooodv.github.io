@@ -134,19 +134,114 @@
   <div id="content-inner">
     
 <article id="post">
-  <div class="post-page-title"  style="background-color:#26A69A;background-image:url(/images/random/vateral-4.png)" >
-  <h2>实习周记（第二周）</h2>
+  <div class="post-page-title"  style="background-color:#26A69A;background-image:url(/images/random/vateral-1.png)" >
+  <h2></h2>
     
-  <p>作者:booooodv &nbsp&nbsp 发布于:<time datetime="2018-07-23T14:07:58.000Z">
-          2018-07-23
+  <p>作者:booooodv &nbsp&nbsp 发布于:<time datetime="2018-10-31T08:23:20.359Z">
+          2018-10-31
     </time>
   </p>
     
   </div>
   <div class="post-page-content">
-  <h3 id="时间"><a href="#时间" class="headerlink" title="时间"></a>时间</h3><p>2018.7.16-2018.7.20<br>朝九晚六的时间已经习惯，下大雨让我去地铁站和地铁站到公司之间无法汽车导致了迟到，应该要有预留时间。  </p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>慢慢开始习惯了时间，新鲜感开始消失，带来了一些疲倦感。在有任务的时候盯着屏幕连续看几个小时没问题，但也导致我最近看东西看不清，似乎眼睛已经在提醒我了。还有身体的劳累感提醒我需要有些运动，但是公司每天的广播体操有好好在做。</p>
-<h3 id="技术"><a href="#技术" class="headerlink" title="技术"></a>技术</h3><p>这周一做了个Html页面，练了练手，感觉还是数据更加重要。后来几天在研究爬虫，但是十分不幸的是第一次爬的是具有很高难度反爬虫的中国知网，刚开始无从下手，怀疑人生，最后通过不懈努力通过老版本的页面可以爬到一点点。然后发现几次访问后有验证码，所以实现了动态IP来爬，但是实在是太慢了，而且不稳定，准备多线程爬的时候周末来了。具体代码和步骤会放在GitHub。</p>
+  <!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Our Love Story</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code" style="margin-top: 40.5px;">
+				<span class="comments">/**</span><br>
+				<span class="space"><span class="comments">* 我们因为修电脑认识</span><br>
+				<span class="space"><span class="comments">* 虽然情节有点老套，但是我是真的幸运</span><br>
+				<span class="space"><span class="comments">*/</span><br>
+				Boy i = <span class="keyword">new</span> Boy(<span class="string">"小疯子"</span>);<br>
+				Girl u = <span class="keyword">new</span> Girl(<span class="string">"小潘潘"</span>);<br>
+				<span class="comments">// 2017年11月5日，我请求把你的手交给我 </span><br>
+				i.love(u);<br>
+				<span class="comments">// 你把手放在我的手上</span><br>
+				u.accepted();<br>
+				<span class="comments">// 分开一小会，就很想念你</span><br>
+				i.miss(u);<br>
+				<span class="comments">// 我努力呵护你，不希望你受到一点伤害</span><br>
+				i.takeCareOf(u);<br>
+				<span class="comments">// 生活不是理想，需要不断奋斗</span><br>
+				<span class="comments">// 所以我会加倍努力，永远守护在你身边</span><br>
+				<span class="keyword">boolean</span> isDiffcult = <span class="keyword">true</span>;<br>
+				<span class="keyword">while</span> (isDiffcult) {<br>
+				<span class="placeholder">i.fightFor(u);<br>
+				<span class="placeholder"><span class="comments">// 为了我们的幸福</span><br>
+				<span class="placeholder">isDiffcult = i.overCome();<br>
+				}<br>
+				<span class="comments">// 一个大房子，一个落地窗，一把吉他，还有你和我</span><br>
+				i.marry(u);<br>
+				i.liveHappilyWith(u);<br>
+			</span></span></span></span></span></span>_</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						We have been together for
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						Love u forever and ever.<br>
+						<div class="signature">- Feng</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2017, 11, 05);
+		together.setHours(12);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+</html>
 
   </div>
   <!--评论块-->
@@ -156,23 +251,15 @@
 <nav class="post-nav">
   <!-- Prev Nav -->
     
-  <a href="/2018/08/19/实习总结/" id="post_nav-newer" class="post-nav-content prev-content">
-      新篇
-  </a>
-    
 
 
   <!-- Next Nav -->
-    
-  <a href="/2018/07/15/实习日记（第一周）/" id="post_nav-older" class="post-nav-content next-content">
-      旧篇
-  </a>
     
 </nav>
 <div class="post-toc-btn"><i class="material-icons">format_list_numbered</i></div>
 <div class="post-toc-none"><p>(无)</p></div>
 <div class="post-toc-box">
-    <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#时间"><span class="post-toc-number">1.</span> <span class="post-toc-text">时间</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#总结"><span class="post-toc-number">2.</span> <span class="post-toc-text">总结</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#技术"><span class="post-toc-number">3.</span> <span class="post-toc-text">技术</span></a></li></ol>
+    
 </div>
 <!--<div class="post-back"><i class="material-icons">arrow_back</i></div>-->
 <script type="text/javascript">
