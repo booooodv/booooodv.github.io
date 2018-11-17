@@ -134,7 +134,7 @@
   <div id="content-inner">
     
 <article id="post">
-  <div class="post-page-title"  style="background-color:#26A69A;background-image:url(/images/random/vateral-14.png)" >
+  <div class="post-page-title"  style="background-color:#26A69A;background-image:url(/images/random/vateral-16.png)" >
   <h2>【CTF】HTTP篇</h2>
     
   <p>作者:booooodv &nbsp&nbsp 发布于:<time datetime="2018-11-15T22:41:57.000Z">
@@ -222,7 +222,7 @@ Connection: close
 <p>更多状态码请自行查阅</p>
 <h3 id="HTTP工作原理"><a href="#HTTP工作原理" class="headerlink" title="HTTP工作原理"></a>HTTP工作原理</h3><p>HTTP协议定义Web客户端如何从Web服务器请求Web页面，以及服务器如何把Web页面传送给客户端。HTTP协议采用了请求/响应模型。客户端向服务器发送一个请求报文，请求报文包含请求的方法、URL、协议版本、请求头部和请求数据。服务器以一个状态行作为响应，响应的内容包括协议的版本、成功或者错误代码、服务器信息、响应头部和响应数据。</p>
 <p>以下是 HTTP 请求/响应的步骤：</p>
-<h4 id="1、客户端连接到Web服务器"><a href="#1、客户端连接到Web服务器" class="headerlink" title="1、客户端连接到Web服务器"></a>1、客户端连接到Web服务器</h4><p>一个HTTP客户端，通常是浏览器，与Web服务器的HTTP端口（默认为80）建立一个TCP套接字连接。例如，<a href="http://www.oakcms.cn。" target="_blank" rel="noopener">http://www.oakcms.cn。</a></p>
+<h4 id="1、客户端连接到Web服务器"><a href="#1、客户端连接到Web服务器" class="headerlink" title="1、客户端连接到Web服务器"></a>1、客户端连接到Web服务器</h4><p>一个HTTP客户端，通常是浏览器，与Web服务器的HTTP端口（默认为80）建立一个TCP套接字连接。</p>
 <h4 id="2、发送HTTP请求"><a href="#2、发送HTTP请求" class="headerlink" title="2、发送HTTP请求"></a>2、发送HTTP请求</h4><p>通过TCP套接字，客户端向Web服务器发送一个文本的请求报文，一个请求报文由请求行、请求头部、空行和请求数据4部分组成。</p>
 <h4 id="3、服务器接受请求并返回HTTP响应"><a href="#3、服务器接受请求并返回HTTP响应" class="headerlink" title="3、服务器接受请求并返回HTTP响应"></a>3、服务器接受请求并返回HTTP响应</h4><p>Web服务器解析请求，定位请求资源。服务器将资源复本写到TCP套接字，由客户端读取。一个响应由状态行、响应头部、空行和响应数据4部分组成。</p>
 <h4 id="4、释放连接TCP连接"><a href="#4、释放连接TCP连接" class="headerlink" title="4、释放连接TCP连接"></a>4、释放连接TCP连接</h4><p>若connection 模式为close，则服务器主动关闭TCP连接，客户端被动关闭连接，释放TCP连接;若connection 模式为keepalive，则该连接会保持一段时间，在该时间内可以继续接收请求;</p>
